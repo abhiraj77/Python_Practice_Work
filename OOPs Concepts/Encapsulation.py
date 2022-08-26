@@ -1,5 +1,5 @@
 # In Encapsulation we try to wrap up classes, methods and variables into one unit so that the user doesn't accidentaly change a variable value or code.
-# In Python, encapsulation is present but is just customary rather than hard coded.
+# In Python, Private and Protected members are present but are just customary rather than hard coded.
 # In Python, we can call and edit protected and private variables outside the class but it is an understanding between programs to not do it.
 
 class Base:
