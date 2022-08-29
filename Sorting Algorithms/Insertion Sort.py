@@ -3,20 +3,27 @@
 def InsertionSort(arr):
     i = 1
     while i < len(arr):
-        a = arr[i]
+        anchor = arr[i]
         j = i-1
-        print(f"Comparing {j}, {i}")
-        while j >= 0 and a < arr[j]:
+        # print(f"Comparing {j}, {i}")
+        while j >= 0 and anchor < arr[j]:
             arr[j+1] = arr[j]
             j-=1
-            print(f"Pushing element up: {arr}")
-        arr[j+1] = a
+            # print(f"Pushing element up: {arr}")
+        arr[j+1] = anchor
         i+=1
-        print(arr)
-        print("--------------\n")
+        # print(arr)
+        # print("--------------\n")
     return arr
 
-arr = [2, 19,31,45,30,11,121,27]
-print(f"Before Sorting: {arr}")
-arr = InsertionSort(arr)
-print(f"After  Sorting: {arr}")
+tests = [
+        [89, 78, 61, 53, 23, 21, 17, 12, 9, 7, 6, 2, 1], # Descending Order
+        [], # Empty list
+        [1,5,8,9], # Ascending Order
+        [234,3,1,56,34,12,9,12,1300], # Random Array
+        [5] # Single element
+    ]
+for arr in tests:
+    print(f"Before Sorting: {arr}")
+    arr = InsertionSort(arr)
+    print(f"After  Sorting: {arr}")

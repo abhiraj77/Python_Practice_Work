@@ -8,15 +8,19 @@ def SelectionSort(arr):
             if arr[i] < arr[s]:
                 arr[s], arr[i] = arr[i], arr[s]
             i+=1
-        print(f"Updated array with least item at {s}: {arr}\n")
+        # print(f"Sorted Array till {s}: {arr}\n")
         s+=1
     return arr
 
 
-arr = [64, 34, 25, 12, 22, 11, 90]
-# arr = [] # Empty edge case
-# arr = [1] # Single Element Edge Case
-# arr = ["a","A","b","B"] # Different data type Edge Case
-print(f"Before Sorting: {arr}")
-arr = SelectionSort(arr)
-print(f"After  Sorting: {arr}")
+tests = [
+        [89, 78, 61, 53, 23, 21, 17, 12, 9, 7, 6, 2, 1], # Descending Order
+        [], # Empty list
+        [1,5,8,9], # Ascending Order
+        [234,3,1,56,34,12,9,12,1300], # Random Array
+        [5] # Single element
+    ]
+for arr in tests:
+    print(f"Before Sorting: {arr}")
+    arr = SelectionSort(arr)
+    print(f"After  Sorting: {arr}")
