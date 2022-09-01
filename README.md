@@ -1,7 +1,8 @@
 # Python_Practice_Work
- Keeping a track of all small python practice codes
+ Keeping a track of all small python practice codes.
 
  ## Index:
+ A Good place to go and pick up DSA from: https://www.programiz.com/dsa
  ### OOPs Concepts Folder:
  - Class.py - Template of intiating a class.
  - Polymorphism.py - The Eagle and Ostrich class change the function flight which is derived from the Bird Class.
