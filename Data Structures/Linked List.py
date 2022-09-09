@@ -60,6 +60,8 @@ class LinkedList:
 
         # Change Next of last node as new_node
         last.next = new_node
+
+    def delete(self, node):
         pass
 
 llist = LinkedList()
