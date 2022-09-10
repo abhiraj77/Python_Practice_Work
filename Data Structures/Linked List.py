@@ -61,8 +61,23 @@ class LinkedList:
         # Change Next of last node as new_node
         last.next = new_node
 
-    def delete(self, node):
-        pass
+    def delete(self, val):
+        
+        head = self.head
+
+        if head.data == val:
+            self.head = head.next
+            return
+
+        prev = head
+        while(head):
+            if head.data == val:
+                prev.next = head.next
+                return
+            prev = head
+            head = head.next
+        print(f"Did not find the value {val} in the LinkedList.")
+
 
 llist = LinkedList()
 
@@ -88,5 +103,12 @@ llist.insertAfter(l2list.head,6)
 
 # Pushing a node at the end
 llist.append(4)
+
+llist.printList()
+
+print("--------------------")
+
+# Deleting a node by value on the basis of first occurance.
+llist.delete(5)
 
 llist.printList()
