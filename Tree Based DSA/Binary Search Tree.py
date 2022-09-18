@@ -27,6 +27,23 @@ class Node:
                     self.right = Node(data)
         else:
             self.data = data
+
+    # Get minimum:
+    def get_min(self):
+        current = self
+        while current.left:
+            current = current.left
+        return current.data
+
+    def get_max(self):
+        current = self
+        while current.right:
+            current = current.right
+        return current.data
+
+    # Searching value in BST
+    def search(self, val):
+        pass
     
     # Inorder Traversal 
     # Left->Root->Right
@@ -36,7 +53,6 @@ class Node:
             result = self.Inorder(root.left)
             result.append(root.data)
             result = result + self.Inorder(root.right)
-            print(result)
         return result
 
     # Preorder Traversal
@@ -69,3 +85,5 @@ root.insert(42)
 print(f"Inorder = {root.Inorder(root)}")
 print(f"Preorder = {root.Preorder(root)}")
 print(f"Postorder = {root.Postorder(root)}")
+print(f"Min Value = {root.get_min()}")
+print(f"Max Value = {root.get_max()}")
